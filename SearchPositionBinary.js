@@ -1,16 +1,3 @@
-const searchPosition = (nums, target) => {
-
-    for(const key in nums) {
-        if(nums[key] === target) {
-            return key
-        }else {
-            nums.push(target)
-            return nums.sort().indexOf(target)
-        }
-    }
-
-}
-
 const searchInsert = (nums, target) => {
     let left = 0
     let right = nums.length - 1
@@ -43,7 +30,7 @@ const target3 = 7
 const numbers4 =[1,2,3,4,5,10]
 const target4 = 2
 
-console.log(searchPosition(numbers, target)) // should log : 4
-console.log(searchPosition(numbers2, target2)) // should log : 2
-console.log(searchPosition(numbers3, target3)) // should log : 4
+console.log(searchInsert(numbers, target)) // should log : 4
+console.log(searchInsert(numbers2, target2)) // should log : 2
+console.log(searchInsert(numbers3, target3)) // should log : 4
 console.log(searchInsert(numbers4, target4)) // should log : 1
