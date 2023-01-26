@@ -1,0 +1,15 @@
+[[package]]
+name = "git-python"
+version = "1.1.1"
+description = "combination and simplification of some useful git commands"
+category = "main"
+optional = false
+python-versions = "*"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.10"
+content-hash = "3e78306cd371db17018a6a3089f1cb5e56a9d78971c1f92515404d5b18bdb3d7"
+
+[metadata.files]
+git-python = []
