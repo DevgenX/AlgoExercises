@@ -8,8 +8,6 @@ const findMissingWords = (base, target) => {
 			return !target.includes(item)
 		})
 	})
-
-
 }
 
 
@@ -30,3 +28,5 @@ const t3 = performance.now()
 console.log(findMissingWords(c, b))
 const t4 = performance.now()
 console.log(`Time elapsed: ${t4-t3} ms`)
+
+
