@@ -21,12 +21,4 @@ console.log(`Time elapsed: ${t2-t1} ms`)
 
 
 
-const c = 'I like cheese'
-const b = 'like'
-
-const t3 = performance.now()
-console.log(findMissingWords(c, b))
-const t4 = performance.now()
-console.log(`Time elapsed: ${t4-t3} ms`)
-
 
