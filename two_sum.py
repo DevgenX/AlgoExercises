@@ -1,4 +1,4 @@
-def two_sum(nums: list[int], target: [int]):
+def two_sum(nums: list[int], target:int):
   d = {}
   # Enumerate through the array
   for i, v in enumerate(nums):
@@ -11,3 +11,5 @@ def two_sum(nums: list[int], target: [int]):
     else:
       # else set the d[v](value) to have the index
       d[v] = i
+
+print(two_sum([2,7,11,13], 9))
