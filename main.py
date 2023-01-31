@@ -1,4 +1,4 @@
-def search_index(nums: list[int], target: [int]):
+def search_index(nums: list[int], target: int):
 
   for i, v in enumerate(nums):
     if v == target:
