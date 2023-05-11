@@ -79,21 +79,44 @@ class SinglyLinkedList {
 		if(!this.get(index)) return false; 
 		const getValue = this.get(index)
 		getValue.val = val
-		this.length++
 		return this
+	}
+	insert(index, val) {
+		if(index < 0 || index > this.length) return false 
+		if(index === this.length) !!this.push(val)
+		if(index === 0) return !!this.unshift(val)
+		let newNode = new Node(val)
+		let prev  = this.get(index - 1)
+		let temp = prev.next
+		prev.next = newNode
+		newNode.next = temp
+		this.length++
+	}
+	remove(index) {
+		if(index < 0 || index > this.length) return undefined 
+		if(index === length - 1) return this.pop()
+		if(index === 0) return this.shift()
+		let prevNode = this.get(index - 1)
+		let removedVal = prevNode.next 
+		prevNode.next = removedVal.next 
+		this.length--
+		return removedVal
 	}
 }
 
 
 list = new SinglyLinkedList()
 
-console.log(list.push('Goodbye'))
-console.log(list.push('Hi'))
-console.log(list.push(1))
-console.log(list.push(2))
-console.log(list.push(3))
-console.log(list.set(3, 5))
-console.log(list.get(3).val)
+// // console.log(list.push('Goodbye'))
+// // console.log(list.push('Hi'))
+// // list.push(1)
+// // list.push(2)
+// // list.push(3)
+// console.log(list.insert(0,'cool'))
+// // console.log(list.get(1).val)
+// // // console.log(list.set(0, 2))
+// // console.log(list.get(0).val)
+// // // console.log(list)
 
 
 
